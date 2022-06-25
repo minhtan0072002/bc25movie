@@ -4,12 +4,13 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomeTemplate from "./containers/HomeTemplate";
 import HomePage from "./containers/HomeTemplate/HomePage";
 import AboutPage from "./containers/HomeTemplate/AboutPage";
-import ListMovie from "./containers/HomeTemplate/ListMoviePage";
 import DashboardPage from "./containers/AdminTemplate/DashboardPage";
 import AdminTemplate from "./containers/AdminTemplate";
 import AddUserPage from "./containers/AdminTemplate/AddUserPage";
 import AddMoviePage from "./containers/AdminTemplate/AddMoivePage";
 import PageNotFound from "./containers/PageNotFound";
+import ListMoviePage from "./containers/HomeTemplate/ListMoviePage";
+import HooksPage from "./containers/HomeTemplate/HooksPage";
 
 function App() {
   return (
@@ -21,8 +22,10 @@ function App() {
           <Route path="home" element={<HomePage />} />
           {/* AboutPage */}
           <Route path="about" element={<AboutPage />} />
-          {/* ListMovie */}
-          <Route path="list-movie" element={<ListMovie />} />
+          {/* ListMoviePage */}
+          <Route path="list-movie" element={<ListMoviePage />} />
+          {/* HooksPage */}
+          <Route path="hooks" element={<HooksPage />} />
         </Route>
 
         {/* Redirect to admin/dashboard */}
